@@ -44,7 +44,7 @@ RUN apt-get update \
  && apt-get autoremove -y \
  && rm -rf /var/lib/apt/lists/* \
  && mkdir -p /cache /config /media \
- && chmod 777 /cache /config /media \
+ && chmod 777 /cache /config /media /dev/dri/renderD128 \
  && sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && locale-gen
 
 ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
